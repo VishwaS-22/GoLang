@@ -6,11 +6,11 @@ import (
 
 func main() {
     // Elemtents
-    ets := []int{4, 8, 2, 10, 6}
+    ets := []int{23, 54, 36, 20, 14, 100, 1}
 
     // Initializeing max and min with the elemtent one of the array
-    m := elements[0]
-    n := elements[0]
+    m := ets[0]
+    n := ets[0]
 
     // Iterate through the elements
     for _, element := range ets {
