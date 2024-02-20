@@ -1,0 +1,15 @@
+go 1.22.0
+
+use (
+	./CommaOK
+	./Conversion
+	./HW01
+	./HandlingTime
+	./Var
+	./Pointers
+	./Arrays
+	./HandleWebReq
+	./HandleURL
+	./RESTAPI_Go
+	./Tes
+)
