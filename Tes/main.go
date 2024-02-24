@@ -1,66 +1,72 @@
 package main
 
-import "fmt"
-
-// Input a year and find whether it is a leap year or not.
-/*
-func main() {
-
-	year := 2023
-	fmt.Println("Year: ", year)
-
-	if (year%4 == 0 && year%100 != 0) || (year%400 == 0) {
-		fmt.Printf("The year %v is Leap year", year)
-	} else {
-		fmt.Printf("The year %v is Not a Leap year", year)
-	}
-
-}
-*/
-
-// Take two numbers and print the sum of both.
-/*
-func main() {
-	v := 11
-	s := 11
-	res := v + s
-	fmt.Printf("Sum of v and s is: %v", res)
-}*/
-
-//Take a number as input and print the multiplication table for it.
-
-/*func main() {
-	v := 10
-	fmt.Printf("Multiplication table for the input value %v is\n", v)
-	mTable(v)
-}
-func mTable(n int) {
-	for i := 1; i <= 10; i++ {
-		fmt.Printf("%d x %d is %d\n", i, n, i*n)
-	}
-}*/
-// Take 2 numbers as inputs and find their HCF and LCM.
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Printing HCM and LCM")
-	n := 10
-	m := 5
+	//fmt.Println("Slices here")
+	/*
+		var arr1 []int
+		arr1 = append(arr1, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+		fmt.Println(arr1)
+		fmt.Println(len(arr1))
 
-	if n < m {
-		v := n
-	} else {
-		v := m
-	}
-	if n > m {
-		s := n
-	} else {
-		s := m
-	}
+		i := 4
+		arr1 = append(arr1[:i], arr1[i+1:]...)
+		fmt.Println(arr1)
+	*/
 
-	for i := 0; i <= v; i++ {
-		if i%v == 0 && i%s == 0 {
-			fmt.Print("LCM", i)
+	/*read := bufio.NewReader(os.Stdin) // read input
+	in, _ := read.ReadString('\n')    // read till new line arrives
+
+	arr := strings.Fields(in) // split string as individual tokens
+
+	var arr1 []int //slice
+
+	for _, val := range arr {
+
+		n, err := strconv.Atoi(val)
+
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		arr1 = append(arr1, n)
+
+	}
+	for id, val1 := range arr1 {
+		fmt.Printf("%v:%v\n", id, val1) // printing elemtent with Index.
+	}*/
+
+	var n int
+	fmt.Println("Enter a limit for loop:")
+	fmt.Scan(&n)
+	var n1 int
+	//var arr []int
+	arr := make([]int, n)
+	for i := 0; i < n; i++ {
+		fmt.Scan(&n1)
+		//arr = append(arr, n1)
+		arr[i] = n1 // adding elements to the slice
+	}
+	fmt.Println(arr)
+
+	//Finding max
+	max := arr[0]
+	for i := 1; i < len(arr); i++ {
+		if max < arr[i] {
+			max = arr[i]
 		}
 	}
+	fmt.Println("The max val of slice is: ", max)
 
+	//Finding min of slice
+	min := arr[0]
+	for _, i := range arr[1:] {
+		if i < min {
+			min = i
+		}
+	}
+	fmt.Println("The min val of slice is: ", min)
 }
